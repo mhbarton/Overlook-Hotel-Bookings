@@ -4,13 +4,68 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webpack Starter Kit</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100&display=swap');
+</style>
+  <title>By the Bay Inn</title>
 </head>
 <body>
-  <img src="./images/turing-logo.png" alt="turing logo">
-  
-  <!-- Do not include the scripts.js or class files here - it is done by the webpack server -->
+  <section class="main-view" id="mainView">
+    <section class="logo-name-container" id="logoNameContainer">
+      <img class="hotel-logo" id="hotelLogo" src="./images/hotel-logo.png">
+      <h1 class="hotel-name" id="hotelName">By the Bay Inn</h1>
+    </section>
+    <section class="lower-container" id="lowerContainer">
+      <img class="inn-image" id="innImage" src="./images/background-inn-image.jpg">
+      <article class="welcome-message" id="welcomeMessage">
+        <h2>Welcome to By the Bay Inn. We hope you enjoy your stay! Please login by clicking the button below.</h2>
+        <button class="login-btn" id="loginBtn">Login</button>
+      </article>
+      <section class="login-view hidden" id="loginView">
+        <div class="login-container" id="loginContainer">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="username" required>
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" required>
+          <button type="submit">Login</button>
+        </div>
+      </section>
+    </section>
+  </section>
+  <section class="user-dashboard-view hidden" id="userDashboardView">
+    <div class="dashboard-container" id="dashboardContainer">
+      <section class="bookings-container" id="bookingsContainer">
+        <header class="bookings-title" id="bookingsTitle">Bookings</header>
+        <article class="past-bookings-wrapper" id="pastBookingsWrapper">
+          <div class="past-bookings-header" id="pastBookingsHeader">Past Bookings</div>
+            <div class="past-bookings-container" id="pastBookingsWrapper"></div>
+        </article>
+        <article class="upcoming-bookings-wrapper" id="upcomingBookingsWrapper">
+          <div class="upcoming-bookings-header" id="upcomingBookingsHeader">Upcoming Bookings</div>
+            <div class="upcoming-bookings-container" id="upcomingBookingsWrapper"></div>
+        </article>
+      </section>
+      <img="" src="">
+      <article class="total-amount-container" id="totalAmountContainer">
+        <div class="amount-message-header" id="amountMessageHeader">Your Total Amount Spent:</div>
+          <div class="amount" id="amount"></div>
+      </article>
+      <button class="more-bookings" id="moreBookings">Click here to book more stays!</button>
+    </div>
+  </section>
+  <section class="find-rooms-view hidden" id="findRoomsView">
+    <section class="calendar-container" id="calendarContainer">
+      <div class="calendar" id="calendar"></div>
+    </section>
+    <section class="offered-rooms-container" id="offeredRoomsContainer">
+      <article class="room-types" id="roomTypes"><article>
+    </section>
+    <section class="available-rooms-container" id="availableRoomsContainer">
+      <article class="available-rooms" id="availableRooms"></article>
+    </section>
+    <button class="book-it" id="bookIt">Book it!</button>
+  </section>
   <script src="bundle.js"></script>
-
 </body>
 </html>
+  <!-- Do not include the scripts.js or class files here - it is done by the webpack server -->
